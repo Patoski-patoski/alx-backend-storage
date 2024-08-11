@@ -1,2 +1,3 @@
 # alx-backend-storage
-Perfecting storage of data in the MySQL database
+**`Back-end`** **`SQL`** **`MySQL`**
+Folder for perfecting the efficient manipulation of datatbase with MySQL.
