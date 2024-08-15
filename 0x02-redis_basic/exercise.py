@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Module for redis exercise
+"""exercisie.py
 """
 
+from functools import wraps
 from unittest.mock import call
+from typing import Callable, Union
 import redis
 import uuid
-from typing import Callable, Union
-from functools import wraps
 
 
 def count_calls(method: Callable) -> Callable:
