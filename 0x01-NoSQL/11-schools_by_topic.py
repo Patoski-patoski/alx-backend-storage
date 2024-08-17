@@ -3,9 +3,18 @@
 """
 
 
-def update_topics(mongo_collection, name, topics):
-    """function that changes all topics of a school document based on the name
+def schools_by_topic(mongo_collection, topic):
+    """function that returns the list of school having a specific topic
     """
-    filter = {"name": name}
-    update = {"$set": {"topics": topics}}
-    result = mongo_collection.update_many(filter, update)
+    filter = {"topics": {"$in": [topic]}}
+    schools = list(mongo_collection.find(filter))
+    return schools
+
+# result = mongo_collection.find()
+#    schools = []
+#    for doc in result:
+#        doc = dict(doc)
+#        topics = doc.get("topics")
+#        if topics and topic in topics:
+#            schools.append(doc)
+#    return schools
